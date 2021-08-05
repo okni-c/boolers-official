@@ -32,20 +32,20 @@ const productController = {
     //         })
     // },
     // //update a thought by Id
-    // updateProduct({ params, body }, res) {
-    //     Thought.findOneAndUpdate(
-    //         { _id: params.id },
-    //         body,
-    //         { new: true, runValidators: true }
-    //     )
-    //         .then(updatedThought => {
-    //             if (!updatedThought) {
-    //                 return res.status(404).json({ message: 'No thought with this ID!' });
-    //             }
-    //             res.json(updatedThought);
-    //         })
-    //         .catch(err => res.json(err));
-    // },
+    updateProduct({ params, body }, res) {
+        Product.findOneAndUpdate(
+            { _id: params.id },
+            body,
+            { new: true, runValidators: true }
+        )
+            .then(updatedProduct => {
+                if (!updatedProduct) {
+                    return res.status(404).json({ message: 'No thought with this ID!' });
+                }
+                res.json(updatedProduct);
+            })
+            .catch(err => res.json(err));
+    },
     // // add thought to user
     addProduct({ params, body }, res) {
         Product.create(body)
@@ -58,16 +58,17 @@ const productController = {
             })
             .catch(err => res.json(err));
     },
-    // // remove thought
-    // removeProduct({ params }, res) {
-    //     Thought.findOneAndDelete({ _id: params.thoughtId })
-    //         .then(deletedProduct => {
-    //             if (!deletedProduct) {
-    //                 return res.status(404).json({ message: 'No product found with this id!' });
-    //             }
-    //         })
-    //         .catch(err => res.json(err));
-    // }
+    // // remove product
+    removeProduct({ params }, res) {
+        Product.findOneAndDelete({ _id: params.id })
+            .then(deletedProduct => {
+                if (!deletedProduct) {
+                    return res.status(404).json({ message: 'No product found with this id!' });
+                }
+                res.status(200).json({ message: 'Product deleted.' })
+            })
+            .catch(err => res.json(err));
+    }
 };
 
 module.exports = productController;

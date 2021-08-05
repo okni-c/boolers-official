@@ -25,10 +25,16 @@ const ProductSchema = new Schema(
             type: Number,
             required: true
         },
-        imageRoute: {
+        thumbnail: {
             type: String,
             required: true
-        }
+        },
+        imageRoutes: [
+            {
+                type: String,
+                required: true
+            }
+        ]
     },
     {
         toJSON: {

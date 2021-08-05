@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const merchRoutes = require('./product-routes');
-
-router.use('/products', merchRoutes);
+const productRoutes = require('./product-routes');
+//api use only
+router.use('/products', productRoutes);
 
 module.exports = router;
