@@ -9,14 +9,14 @@ router.get('/', (req, res) => {
         for (var i = 0; i < docs.length; i += chunkSize) {
             productChuncks.push(docs.slice(i, i + chunkSize));
         }
-        res.render('all-products', { layout: 'index', title: 'Boolers Offical - Merch', products: productChuncks });
+        res.render('all-products', { layout: 'index', title: 'Boolers Official - Merch', products: productChuncks });
     }).lean();
 });
 
 router.get('/:id', (req, res) => {
     router.use(express.static('public'));
     Product.findById(req.params.id, function(err, doc) {
-        res.render('single-product', { layout: 'index', title: 'Boolers Offical - Merch', product: doc });
+        res.render('single-product', { layout: 'index', title: 'Boolers Official - Merch', product: doc });
     }).lean();
 });
 

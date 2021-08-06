@@ -13,15 +13,15 @@ router.use('/', pageRoutes);
 
 //all single client requests
 router.get('/', (req, res) => {
-    res.render('main', { layout: 'index', title: 'Boolers Offical - Home' });
+    res.render('main', { layout: 'index', title: 'Boolers Official - Home' });
 });
 
 router.get('/social', (req, res) => {
-    res.render('social', { layout: 'index', title: 'Boolers Offical - Social' });
+    res.render('social', { layout: 'index', title: 'Boolers Official - Social' });
 });
 
 router.get('/stories', (req, res) => {
-    res.render('stories', { layout: 'index', title: 'Boolers Offical - Stories' });
+    res.render('stories', { layout: 'index', title: 'Boolers Official - Stories' });
 });
 
 router.use((req, res) => {
