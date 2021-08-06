@@ -12,7 +12,7 @@ app.use(express.static('public'))
 app.set('view engine', 'handlebars');
 app.engine('handlebars', exphbs({partialsDir: __dirname + '/views/partials/'}));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/social-network-api', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/boolers-official', {
     useFindAndModify: false,
     useNewUrlParser: true,
     useUnifiedTopology: true
