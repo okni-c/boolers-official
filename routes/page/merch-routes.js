@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
     router.use(express.static('public'));
     Product.findById(req.params.id, function(err, doc) {
-        res.render('single-product', { layout: 'index', title: 'Boolers Official - Merch', product: doc });
+        res.render('single-product', { layout: 'index', title: 'Boolers Official - ' + doc.productName, product: doc });
     }).lean();
 });
 
