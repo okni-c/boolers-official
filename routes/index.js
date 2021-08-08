@@ -20,6 +20,10 @@ router.get('/social', (req, res) => {
     res.render('social', { layout: 'index', title: 'Boolers Official - Social' });
 });
 
+router.get('/contact', (req, res) => {
+    res.render('contact', { layout: 'index', title: 'Boolers Official - Contact Us' });
+});
+
 router.get('/stories', (req, res) => {
     res.render('stories', { layout: 'index', title: 'Boolers Official - Stories' });
 });
