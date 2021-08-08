@@ -197,6 +197,9 @@ h5 {
 .box-primary-nav-trigger .box-menu-text.is-visible {
     color: black;
 }
+.box-primary-nav-trigger .box-menu-text.is-black {
+    color: black;
+}
 
 .box-primary-nav-trigger .box-menu-icon.menu-is-open {
     background-color: black;
@@ -206,12 +209,32 @@ h5 {
     background-color: black;
 }
 
+.box-primary-nav-trigger .box-menu-icon.is-black {
+    background-color: black;
+}
+
+.box-primary-nav-trigger {
+    background-color: black;
+}
+
 .big-booler img.menu-is-open {
     content:url("../img/black-logo.png");
 }
 
 .big-booler img.is-visible {
     content:url("../img/black-logo.png");
+}
+
+.big-booler img.is-black {
+    content:url("../img/black-logo.png");
+}
+
+.box-primary-nav-lg li a.is-white {
+    color: white;
+}
+
+.box-primary-nav-lg li a.is-black {
+    color: black;
 }
 
 .box-logo {
@@ -264,6 +287,10 @@ h5 {
     transition: top .3s, background-color 0s, -webkit-transform .3s;
     transition: transform .3s, top .3s, background-color 0s;
     transition: transform .3s, top .3s, background-color 0s, -webkit-transform .3s;
+}
+
+.box-primary-nav-trigger .box-menu-icon.is-visable::before {
+    background-color: black;
 }
 
 .box-primary-nav-trigger .box-menu-icon::before {

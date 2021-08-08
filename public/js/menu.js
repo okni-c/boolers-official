@@ -16,16 +16,24 @@ jQuery(document).ready(function ($) {
 					//if scrolling up...
 					if (currentTop > 0 && $('.box-header').hasClass('is-fixed')) {
 						$('.box-header').addClass('is-visible');
-
 						$('.box-menu-text').addClass('is-visible');
 						$('.box-menu-icon').addClass('is-visible');
-						$('.big-booler img').addClass('is-visible');
+						$('.big-booler img').addClass('is-visible');				
+						$('.box-primary-nav-lg li a').addClass('is-black');
+
 					} else {
 						$('.box-header').removeClass('is-visible is-fixed');
-
 						$('.box-menu-text').removeClass('is-visible');
 						$('.box-menu-icon').removeClass('is-visible');
 						$('.big-booler img').removeClass('is-visible');
+					}
+					if (currentTop === 0 && window.location.pathname === '/' || window.location.pathname === '/#0') {
+						$('.box-primary-nav-lg li a').removeClass('is-black');
+						$('.box-primary-nav-lg li a').addClass('is-white');
+					}
+					else {
+						$('.box-primary-nav-lg li a').removeClass('is-white');
+						$('.box-primary-nav-lg li a').addClass('is-black');
 					}
 				} else {
 					//if scrolling down...
@@ -33,6 +41,9 @@ jQuery(document).ready(function ($) {
 					if (currentTop > headerHeight && !$('.box-header').hasClass('is-fixed')) $('.box-header').addClass('is-fixed');
 				}
 				this.previousTop = currentTop;
+
+
+
 			});
 	}
 
@@ -56,4 +67,19 @@ jQuery(document).ready(function ($) {
 			});
 		}
 	});
+
+	// detect if on home screen, for white colors on top
+	if (window.location.pathname !== '/' || window.location.pathname !== '/#0') {
+		console.log(window.location.pathname);
+		$('.box-menu-text').addClass('is-black');
+		$('.box-menu-icon').addClass('is-black');
+		$('.big-booler img').addClass('is-black');
+		$('.box-primary-nav-lg li a').removeClass('is-white');
+	} 
+	if (window.location.pathname === '/' || window.location.pathname === '/#0'){
+		$('.box-menu-text').removeClass('is-black');
+		$('.box-menu-icon').removeClass('is-black');
+		$('.big-booler img').removeClass('is-black');
+		$('.box-primary-nav-lg li a').addClass('is-white');
+	}
 });
