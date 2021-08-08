@@ -209,7 +209,23 @@ h5 {
     background-color: black;
 }
 
+.box-primary-nav-trigger .box-menu-icon.is-visible::before {
+    background-color: black;
+}
+
+.box-primary-nav-trigger .box-menu-icon.is-visible:after {
+    background-color: black;
+}
+
 .box-primary-nav-trigger .box-menu-icon.is-black {
+    background-color: black;
+}
+
+.box-primary-nav-trigger .box-menu-icon.is-black::before {
+    background-color: black;
+}
+
+.box-primary-nav-trigger .box-menu-icon.is-black:after {
     background-color: black;
 }
 
@@ -315,6 +331,7 @@ h5 {
     -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
 }
+
 
 .box-primary-nav-trigger .box-menu-icon.is-clicked::after {
     top: 0;
