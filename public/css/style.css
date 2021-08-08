@@ -197,6 +197,7 @@ h5 {
 .box-primary-nav-trigger .box-menu-text.is-visible {
     color: black;
 }
+
 .box-primary-nav-trigger .box-menu-text.is-black {
     color: black;
 }
@@ -234,15 +235,15 @@ h5 {
 }
 
 .big-booler img.menu-is-open {
-    content:url("../img/black-logo.png");
+    content: url("../img/black-logo.png");
 }
 
 .big-booler img.is-visible {
-    content:url("../img/black-logo.png");
+    content: url("../img/black-logo.png");
 }
 
 .big-booler img.is-black {
-    content:url("../img/black-logo.png");
+    content: url("../img/black-logo.png");
 }
 
 .box-primary-nav-lg li a.is-white {
@@ -265,7 +266,6 @@ h5 {
     width: 50px;
     background-color: #fff;
 }
-
 
 .box-primary-nav-trigger .box-menu-text {
     color: white;
@@ -332,7 +332,6 @@ h5 {
     transform: rotate(135deg);
 }
 
-
 .box-primary-nav-trigger .box-menu-icon.is-clicked::after {
     top: 0;
     background-color: black;
@@ -371,6 +370,9 @@ h5 {
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.96);
+    /* background-image: url("../img/controls/garage-door.png");
+    background-repeat: no-repeat;
+    background-size: cover; */
     z-index: 2;
     text-align: center;
     padding: 50px 0;
@@ -1203,6 +1205,23 @@ input:focus, textarea:focus {
 
 .booler-hero {
     width: 40%;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* Responsive media queries
