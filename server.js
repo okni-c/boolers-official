@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const passport = require('passport');
 const flash = require('connect-flash');
+const validator = require('express-validator');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -14,6 +15,7 @@ const stripe = require('stripe')(process.env.STRIPE_KEY);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'))
+app.use(validator());
 app.use(session({secret: 'supersecretsecret', resave: false, saveUninitialized: false}));
 app.use(flash());
 app.use(passport.initialize());

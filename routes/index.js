@@ -5,8 +5,6 @@ const Product = require('../models/Product');
 const Cart = require('../models/Cart');
 const express = require('express');
 const passport = require('passport');
-require('../config/passport');
-
 
 const csrf = require('csurf');
 const csfrProtection = csrf();
@@ -39,7 +37,8 @@ router.get('/stories', (req, res) => {
 
 // user stuff
 router.get('/signup', (req, res) => {
-    res.render('signup', { layout: 'index', title: 'Boolers Official - Sign Up', csrfToken: req.csrfToken() });
+    var messages = req.flash('error');
+    res.render('signup', { layout: 'index', title: 'Boolers Official - Sign Up', csrfToken: req.csrfToken(), messages: messages, hasErrors: messages.length > 0 });
 });
 
 router.post('/signup', passport.authenticate('local.signup', {
