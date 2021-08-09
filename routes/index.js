@@ -58,6 +58,14 @@ router.post('/signin', passport.authenticate('local.signin', {
     failureFlash: true
 }));
 
+router.get('/profile', isLoggedIn, function(req, res) {
+    res.render('profile', { layout: 'index', title: 'Boolers Official - Profile' });
+});
+
+router.get('/logout', function(req, res, next) {
+    req.logout();
+    res.redirect('/');
+});
 
 // // cart stuff
 // router.get('/add-to-cart:id', (req, res) => {
@@ -80,3 +88,10 @@ router.use((req, res) => {
 });
 
 module.exports = router;
+
+function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect('/');
+};

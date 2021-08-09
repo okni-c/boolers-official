@@ -527,7 +527,7 @@ h5 {
 ==================================================*/
 
 .background-tint {
-    background-color: rgba(70, 70, 70, 0.5);
+    background-color: rgba(53, 53, 53, 0.596);
     /* Tint color */
     background-blend-mode: multiply;
 }
@@ -541,12 +541,21 @@ h5 {
 
 .box-intro .table-cell {
     display: table-cell;
-    background-image: url("../img/hero-animated.gif");
     background-size: cover;
     background-position: center;
     height: auto;
     background-repeat: no-repeat;
     vertical-align: middle;
+}
+
+video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .box-intro em {
