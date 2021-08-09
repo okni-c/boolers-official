@@ -47,6 +47,17 @@ router.post('/signup', passport.authenticate('local.signup', {
     failureFlash: true
 }));
 
+router.get('/signin', (req, res) => {
+    var messages = req.flash('error');
+    res.render('signin', { layout: 'index', title: 'Boolers Official - Sign In', csrfToken: req.csrfToken(), messages: messages, hasErrors: messages.length > 0 });
+});
+
+router.post('/signin', passport.authenticate('local.signin', {
+    successRedirect: '/merch',
+    failureRedirect: '/signin',
+    failureFlash: true
+}));
+
 
 // // cart stuff
 // router.get('/add-to-cart:id', (req, res) => {
