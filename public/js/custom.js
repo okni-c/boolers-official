@@ -1,4 +1,4 @@
-$(window).load(function () {
+$(window).on('load',function() {
 
     // preloader
     $('#status').fadeOut(); // will first fade out the loading animation
