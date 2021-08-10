@@ -4,7 +4,7 @@
         <nav>
             <a class="big-booler" href="/"><img src="img/image.png" width="90" alt="Logo"></a>
             <button class="cart-btn mobile" data-toggle="modal" data-target="#exampleModal"><ion-icon name="bag"></ion-icon></button>
-            <a class="box-primary-nav-trigger">
+            <a href='' class="box-primary-nav-trigger">
                 <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
             </a>
             <ul class="box-primary-nav-lg">
@@ -12,7 +12,7 @@
                 <li><a href="/stories">Stories</a></li>
                 <li><a href="/merch">Merch</a></li>
                 <li><a href="/contact">Contact us</a></li>
-                <li class="li-cart-btn"><button class="cart-btn" data-toggle="modal" data-target="#exampleModal"><ion-icon name="bag"></ion-icon></button><span class="badge badge-danger">{{ session.cart.totalQty }}</span></li>
+                <li class="li-cart-btn"><button class="cart-btn" data-toggle="modal" data-target="#exampleModal"><ion-icon name="bag"></ion-icon></button><span class="badge badge-pill badge-danger small-text">{{ session.cart.totalQty }}</span></li>
             </ul>
         </nav>
     </div>
