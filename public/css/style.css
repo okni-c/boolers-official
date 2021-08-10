@@ -166,7 +166,7 @@ h5 {
 }
 
 .box-header {
-    height: 80px;
+    height: 105px;
     background: transparent;
     box-shadow: none;
 }
@@ -182,7 +182,7 @@ h5 {
 
 .box-header.is-fixed {
     position: fixed;
-    top: -80px;
+    top: -105px;
     background-color: rgba(255, 255, 255, 0.96);
     -webkit-transition: -webkit-transform 0.3s;
     transition: -webkit-transform 0.3s;
@@ -264,7 +264,9 @@ h5 {
 }
 
 .box-logo {
-    padding: 23px;
+    padding-top: 35px;
+    padding-left: 35px;
+    padding-right: 20px;
 }
 
 .box-primary-nav-trigger {
@@ -434,9 +436,13 @@ h5 {
 }
 
 .big-booler {
-    order: -1;
+    order: 1;
     position: absolute;
     text-align: center;
+}
+
+.big-booler img {
+    width: 100px;
 }
 
 .box-primary-nav-lg li {
@@ -1215,31 +1221,17 @@ input:focus, textarea:focus {
 
 .cart-btn:hover {
     color: rgba(53, 53, 53, 0.596);
-    animation: shake 0.6s cubic-bezier(.36, .07, .19, .97) both;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
 }
 
-@keyframes shake {
-    10%, 90% {
-        transform: translate3d(-1px, 0, 0);
-    }
-    20%, 80% {
-        transform: translate3d(1px, 0, 0);
-    }
-    30%, 50%, 70% {
-        transform: translate3d(-2px, 0, 0);
-    }
-    40%, 60% {
-        transform: translate3d(2px, 0, 0);
-    }
+button.cart-btn:focus {
+    border: none;
+    outline: none;
 }
 
 .cart-btn.mobile {
     position: fixed;
-    right: 100px;
-    top: 31.5%;
+    right: 110px;
+    top: 29%;
 }
 
 .cart-btn.is-hidden {

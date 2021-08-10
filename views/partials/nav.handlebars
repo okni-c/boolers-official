@@ -2,8 +2,9 @@
 <header class="box-header">
     <div class="box-logo">
         <nav>
-            <a class="big-booler" href="/"><img src="img/image.png" width="90" alt="Logo"></a>
-            <button class="cart-btn mobile" data-toggle="modal" data-target="#exampleModal"><ion-icon name="bag"></ion-icon></button>
+            <a class="big-booler" href="/"><img src="img/image.png" alt="Logo"></a>
+            <button class="cart-btn mobile" data-toggle="modal" data-target="#exampleModal"><ion-icon name="bag"></ion-icon><span class="badge badge-pill badge-danger small-text">{{ session.cart.totalQty }}</span></button>
+            
             <a href='' class="box-primary-nav-trigger">
                 <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
             </a>
@@ -12,7 +13,7 @@
                 <li><a href="/stories">Stories</a></li>
                 <li><a href="/merch">Merch</a></li>
                 <li><a href="/contact">Contact us</a></li>
-                <li class="li-cart-btn"><button class="cart-btn" data-toggle="modal" data-target="#exampleModal"><ion-icon name="bag"></ion-icon></button><span class="badge badge-pill badge-danger small-text">{{ session.cart.totalQty }}</span></li>
+                <li class="li-cart-btn"><button class="cart-btn" data-toggle="modal" data-target="#exampleModal"><ion-icon name="bag"></ion-icon><span class="badge badge-pill badge-danger small-text">{{ session.cart.totalQty }}</span></button></li>
             </ul>
         </nav>
     </div>
