@@ -1,38 +1,40 @@
-
 {{> nav}}
 
 <!-- Merch -->
 <div class="top-bar">
     <h1>All Merch</h1>
 </div>
-<div class="container">
-    <!-- portfolio div -->
-    <div class="portfolio-div">
-        <div class="portfolio">
-            <div class="no-padding portfolio_container">
-                {{# each products }}
-                {{# each this }}
-                <!-- single work -->
-                <div class="col-md-3 col-sm-6 fashion logo">
-                    <a href="/merch/{{this._id}}" class="portfolio_item">
-                        <img src={{this.thumbnail}} alt="image" class="img-responsive" />
-                        <div class="portfolio_item_hover">
-                            <div class="portfolio-border clearfix">
-                                <div class="item_info">
-                                    <span>{{ this.productName }}</span>
-                                    <em>View Item</em>
-                                </div>
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="card-deck">
+            {{# each products }}
+            {{# each this }}
+            <!-- single work -->
+            {{!-- <div class="col-sm">
+                <a href="/merch/{{ this._id }}" class="portfolio_item">
+                    <img src={{ this.thumbnail }} alt="image" />
+                    <div class="portfolio_item_hover">
+                        <div class="portfolio-border clearfix">
+                            <div class="item_info">
+                                <span>{{ this.productName }}</span>
+                                <em>View Item</em>
                             </div>
                         </div>
-                    </a>
+                    </div>
+                </a>
+            </div> --}}
+            <div class="card mb-4" style="">
+                <img class="card-img-top" src={{ this.thumbnail }} alt="product image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ this.productName }}</h5>
+                    <p class="card-text">Price: ${{ this.price }}.00</p>
+                    <a href="/merch/{{ this._id }}" class="portfolio_item">CLick to view</a>
                 </div>
-                <!-- end single work -->
-                {{/each}}
-                {{/each}}
             </div>
+            <!-- end single work -->
+            {{/each}}
+            {{/each}}
         </div>
-        <!-- end portfolio_container -->
     </div>
-    <!-- portfolio -->
 </div>
-<!-- end portfolio div -->
