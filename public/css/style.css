@@ -1220,6 +1220,18 @@ input:focus, textarea:focus {
     top: 31.5%;
 }
 
+.cart-btn.is-hidden {
+    display: none;
+}
+
+.li-cart-btn {
+    width: 15%;
+}
+
+.li-cart-btn.is-hidden {
+    width: 0%;
+}
+
 /* single project page
 ==================================================*/
 

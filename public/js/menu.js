@@ -70,7 +70,6 @@ jQuery(document).ready(function ($) {
 
 	// detect if on home screen, for white colors on top
 	if (window.location.pathname !== '/' || window.location.pathname !== '/#0') {
-		console.log(window.location.pathname);
 		$('.box-menu-text').addClass('is-black');
 		$('.box-menu-icon').addClass('is-black');
 		$('.big-booler img').addClass('is-black');
@@ -81,5 +80,16 @@ jQuery(document).ready(function ($) {
 		$('.box-menu-icon').removeClass('is-black');
 		$('.big-booler img').removeClass('is-black');
 		$('.box-primary-nav-lg li a').addClass('is-white');
+	}
+
+	//determine to show cart or not
+	if (window.location.pathname.includes('/merch')) {
+		$('.cart-btn').removeClass('is-hidden');
+		$('.li-cart-btn').removeClass('.is-hidden');
+		console.log('Adding!');
+	} else {
+		$('.cart-btn').addClass('is-hidden');
+		$('.li-cart-btn').addClass('is-hidden');
+		console.log('Removing!');
 	}
 });
