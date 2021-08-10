@@ -1201,6 +1201,25 @@ input:focus, textarea:focus {
     color: #fff;
 }
 
+.cart-btn {
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.cart-btn:hover {
+    color: #7CF3A0;
+}
+
+.cart-btn.mobile {
+    position: fixed;
+    right: 100px;
+    top: 31.5%;
+}
+
 /* single project page
 ==================================================*/
 
@@ -1266,6 +1285,9 @@ input:focus, textarea:focus {
 
 @media (min-width: 992px) {
     .box-primary-nav-trigger {
+        display: none;
+    }
+    .cart-btn.mobile {
         display: none;
     }
 }
