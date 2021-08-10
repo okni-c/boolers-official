@@ -86,10 +86,8 @@ jQuery(document).ready(function ($) {
 	if (window.location.pathname.includes('/merch')) {
 		$('.cart-btn').removeClass('is-hidden');
 		$('.li-cart-btn').removeClass('.is-hidden');
-		console.log('Adding!');
 	} else {
 		$('.cart-btn').addClass('is-hidden');
 		$('.li-cart-btn').addClass('is-hidden');
-		console.log('Removing!');
 	}
 });
