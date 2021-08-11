@@ -25,12 +25,13 @@
                 </a>
             </div> --}}
             <div class="card mb-4" style="">
-                <img class="card-img-top" src={{ this.thumbnail }} alt="product image">
-                <div class="card-body">
-                    <h5 class="card-title">{{ this.productName }}</h5>
-                    <p class="card-text">Price: ${{ this.price }}.00</p>
-                    <a href="/merch/{{ this._id }}" class="portfolio_item">CLick to view</a>
-                </div>
+                <a href="/merch/{{ this._id }}" class="portfolio_item">
+                    <img class="card-img-top" src={{ this.thumbnail }} alt="product image">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ this.productName }}</h3>
+                        <p class="card-text">Price: ${{ this.price }}.00</p>
+                    </div>
+                </a>
             </div>
             <!-- end single work -->
             {{/each}}
