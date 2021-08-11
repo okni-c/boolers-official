@@ -40,145 +40,32 @@
 </div>
 
 
-<!-- Merch -->
+<!-- New Merch -->
 <div class="top-bar">
     <h1>New Merch</h1>
 </div>
-<!-- portfolio div -->
-<div class="portfolio-div">
-    <div class="portfolio">
-        <div class="no-padding portfolio_container">
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="card-deck">
+            {{# each products }}
+            {{# each this }}
             <!-- single work -->
-            <div class="col-md-3 col-sm-6 fashion logo">
-                <a href="single-product.html" class="portfolio_item">
-                    <img src="img/merch/shirt_1A.PNG" alt="image" class="img-responsive" />
-                    <div class="portfolio_item_hover">
-                        <div class="portfolio-border clearfix">
-                            <div class="item_info">
-                                <span>Boolers Equipped Shirt</span>
-                                <em>View Item</em>
-                            </div>
-                        </div>
+            <div class="card mb-4" style="">
+                <a href="/merch/{{ this._id }}" class="portfolio_item">
+                    <img class="card-img-top" src={{ this.thumbnail }} alt="product image">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ this.productName }}</h3>
+                        <p class="card-text">Price: ${{ this.price }}.00</p>
                     </div>
                 </a>
             </div>
             <!-- end single work -->
-
-            <!-- single work -->
-            <div class="col-md-3 col-sm-6 fashion logo">
-                <a href="single-product.html" class="portfolio_item">
-                    <img src="img/merch/shirt_2.PNG" alt="image" class="img-responsive" />
-                    <div class="portfolio_item_hover">
-                        <div class="portfolio-border clearfix">
-                            <div class="item_info">
-                                <span>Floating mockups</span>
-                                <em>Ads / Graphics</em>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- end single work -->
-
-            <!-- single work -->
-            <div class="col-md-3 col-sm-6 fashion logo">
-                <a href="single-product.html" class="portfolio_item">
-                    <img src="img/merch/shirt_3A.PNG" alt="image" class="img-responsive" />
-                    <div class="portfolio_item_hover">
-                        <div class="portfolio-border clearfix">
-                            <div class="item_info">
-                                <span>Photorealistic smartwatch</span>
-                                <em>Photography</em>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- end single work -->
-
-            <!-- single work -->
-            <div class="col-md-3 col-sm-6 fashion logo">
-                <a href="single-product.html" class="portfolio_item">
-                    <img src="img/merch/shirt_4.PNG" alt="image" class="img-responsive" />
-                    <div class="portfolio_item_hover">
-                        <div class="portfolio-border clearfix">
-                            <div class="item_info">
-                                <span>Held by hands</span>
-                                <em>Fashion / Ads</em>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- end single work -->
-
-            <!-- single work -->
-            <div class="col-md-3 col-sm-6 fashion logo">
-                <a href="single-product.html" class="portfolio_item">
-                    <img src="img/merch/shirt_5.PNG" alt="image" class="img-responsive" />
-                    <div class="portfolio_item_hover">
-                        <div class="portfolio-border clearfix">
-                            <div class="item_info">
-                                <span>Mobile devices</span>
-                                <em>Graphics / Ads</em>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- end single work -->
-
-            <!-- single work -->
-            <div class="col-md-3 col-sm-6 fashion logo">
-                <a href="single-product.html" class="portfolio_item">
-                    <img src="img/merch/shirt_6.PNG" alt="image" class="img-responsive" />
-                    <div class="portfolio_item_hover">
-                        <div class="portfolio-border clearfix">
-                            <div class="item_info">
-                                <span>Photorealistic smartwatch</span>
-                                <em>Photography</em>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- end single work -->
-
-            <!-- single work -->
-            <div class="col-md-3 col-sm-6 fashion logo">
-                <a href="single-product.html" class="portfolio_item">
-                    <img src="img/merch/shirt_7.PNG" alt="image" class="img-responsive" />
-                    <div class="portfolio_item_hover">
-                        <div class="portfolio-border clearfix">
-                            <div class="item_info">
-                                <span>Mobile devices</span>
-                                <em>Graphics / Ads</em>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- end single work -->
-
-            <!-- single work -->
-            <div class="col-md-3 col-sm-6">
-                <a href="single-product.html" class="portfolio_item">
-                    <img src="img/merch/shirt_8.PNG" alt="image" class="img-responsive" />
-                    <div class="portfolio_item_hover">
-                        <div class="portfolio-border clearfix">
-                            <div class="item_info">
-                                <span>Mobile devices</span>
-                                <em>Graphics / Ads</em>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- end single work -->
-
+            {{/each}}
+            {{/each}}
         </div>
-        <!-- end portfolio_container -->
     </div>
-    <!-- portfolio -->
 </div>
-<!-- end portfolio div -->
+    
+</div>
+<!-- New Merch -->

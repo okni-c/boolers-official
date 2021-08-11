@@ -20,7 +20,14 @@ router.use('/', pageRoutes);
 
 //all single client requests
 router.get('/', (req, res) => {
-    res.render('main', { layout: 'index', title: 'Boolers Official - Home' });
+    Product.find(function(err, docs) {
+        var productChuncks = [];
+        var chunkSize = 3;
+        for (var i = 0; i < docs.length; i += chunkSize) {
+            productChuncks.push(docs.slice(i, i + chunkSize));
+        }
+        res.render('main', { layout: 'index', title: 'Boolers Official - Home', products: productChuncks });
+    }).lean();
 });
 
 router.get('/social', (req, res) => {

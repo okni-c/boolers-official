@@ -3,6 +3,7 @@
 <!-- Merch -->
 <div class="top-bar">
     <h1>All Merch</h1>
+    <p><a href="/">Home</a> / <a href="/merch">merch</a></p>
 </div>
 
 <div class="container mt-3">
@@ -11,19 +12,6 @@
             {{# each products }}
             {{# each this }}
             <!-- single work -->
-            {{!-- <div class="col-sm">
-                <a href="/merch/{{ this._id }}" class="portfolio_item">
-                    <img src={{ this.thumbnail }} alt="image" />
-                    <div class="portfolio_item_hover">
-                        <div class="portfolio-border clearfix">
-                            <div class="item_info">
-                                <span>{{ this.productName }}</span>
-                                <em>View Item</em>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div> --}}
             <div class="card mb-4" style="">
                 <a href="/merch/{{ this._id }}" class="portfolio_item">
                     <img class="card-img-top" src={{ this.thumbnail }} alt="product image">
