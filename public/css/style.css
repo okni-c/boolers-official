@@ -1228,6 +1228,11 @@ input:focus, textarea:focus {
     transition: color 0.3s;
 }
 
+.cart-img {
+    width: 10%;
+    height: auto;
+}
+
 .cart-btn:hover {
     color: rgba(53, 53, 53, 0.596);
 }

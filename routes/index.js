@@ -75,7 +75,7 @@ router.get('/stories', (req, res) => {
 // });
 
 // cart stuff
-router.get('/add-to-cart/:id', (req, res) => {
+router.get('/add-to-cart/:id', (req, res, next) => {
     var productId = req.params.id;
     var cart = new Cart(req.session.cart ? req.session.cart : {});
 
@@ -83,10 +83,10 @@ router.get('/add-to-cart/:id', (req, res) => {
         if (err) {
             return res.redirect('/');
         }
-        cart.add(product, product.id);
+        cart.add(product, productId);
         req.session.cart = cart;
         console.log(req.session.cart);
-        res.redirect('/merch');
+        res.redirect('/cart');
     });
 });
 
@@ -98,7 +98,23 @@ router.get('/cart', function (req, res) {
     res.render('cart', { layout: 'index', title: 'Boolers Official - Cart', products: cart.generateArray(), totalPrice: cart.totalPrice });
 });
 
-// res.render('stories', { layout: 'index', title: 'Boolers Official - Stories' });
+router.get('/reduce/:id', function (req, res) {
+    var productId = req.params.id;
+    var cart = new Cart(req.session.cart ? req.session.cart : {});
+
+    cart.reduceByOne(productId);
+    req.session.cart = cart;
+    res.redirect('/cart');
+});
+
+router.get('/remove/:id', function (req, res) {
+    var productId = req.params.id;
+    var cart = new Cart(req.session.cart ? req.session.cart : {});
+
+    cart.removeItem(productId);
+    req.session.cart = cart;
+    res.redirect('/cart');
+});
 
 router.use((req, res) => {
     res.status(404).send('<h1>404 Error: This page does not exist.</h1> <h4> Please try a different address route.</h4>');

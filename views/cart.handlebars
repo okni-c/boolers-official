@@ -1,45 +1,28 @@
-<!-- Shopping cart modal -->
-{{!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true"> --}}
-    {{!-- <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Shopping Cart</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <h5>Popover in a modal</h5>
-                <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title"
-                        data-content="Popover body content is set in this attribute.">button</a> triggers a popover on
-                    click.</p>
-                <hr>
-                <h5>Tooltips in a modal</h5>
-                <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test"
-                        title="Tooltip">that link</a> have tooltips on hover.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Back to Merch</button>
-                <button type="button" class="btn btn-primary">Check Out</button>
-            </div>
-        </div>
-    </div> --}}
+{{> nav}}
+
+<div class="top-bar">
+    <h1>Shopping Cart</h1>
+    <p><a href="/">Home</a> / <a href="/merch">Merch</a> / Shopping Cart</p>
+</div>
+
+<div class="container">
     {{# if products }}
     <div class="row">
         <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
             <ul class="list-group">
                 {{# each products }}
                 <li class="list-group-item">
+                    <img class="cart-img" src={{ this.item.thumbnail }} />
                     <span class="badge">{{ this.qty }}</span>
-                    <strong>{{ this.item.title }}</strong>
+                    <strong>{{ this.item.productName }}</strong>
                     <span class="label label-success">${{ this.price }}</span>
                     <div class="btn-group">
                         <button class="btn btn-primary btn-xs dropdown-toggle" type="button"
                             data-toggle="dropdown">Action <span class="caret"></span></button>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Reduce by 1</a></li>
-                            <li><a href="#">Remove All</a></li>
+                            <li><a href="/reduce/{{this.item._id}}">Reduce by 1</a></li>
+                            <li><a href="/add-to-cart/{{this.item._id}}">Add by 1</a></li>
+                            <li><a href="/remove/{{this.item._id}}">Remove All</a></li>
                         </ul>
                     </div>
                 </li>
@@ -65,4 +48,4 @@
         </div>
     </div>
     {{/if}}
-{{!-- </div> --}}
+</div>
