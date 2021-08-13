@@ -20,7 +20,7 @@ router.use('/', pageRoutes);
 
 //all single client requests
 router.get('/', (req, res) => {
-    Product.find(function(err, docs) {
+    Product.find(function (err, docs) {
         var productChuncks = [];
         var chunkSize = 3;
         for (var i = 0; i < docs.length; i += chunkSize) {
@@ -79,7 +79,7 @@ router.get('/add-to-cart/:id', (req, res) => {
     var productId = req.params.id;
     var cart = new Cart(req.session.cart ? req.session.cart : {});
 
-    Product.findById(productId, function(err, product) {
+    Product.findById(productId, function (err, product) {
         if (err) {
             return res.redirect('/');
         }
@@ -89,6 +89,16 @@ router.get('/add-to-cart/:id', (req, res) => {
         res.redirect('/merch');
     });
 });
+
+router.get('/cart', function (req, res) {
+    if (!req.session.cart) {
+        return res.render('cart', { layout: 'index', title: 'Boolers Official - Cart', products: null });
+    }
+    var cart = new Cart(req.session.cart);
+    res.render('cart', { layout: 'index', title: 'Boolers Official - Cart', products: cart.generateArray(), totalPrice: cart.totalPrice });
+});
+
+// res.render('stories', { layout: 'index', title: 'Boolers Official - Stories' });
 
 router.use((req, res) => {
     res.status(404).send('<h1>404 Error: This page does not exist.</h1> <h4> Please try a different address route.</h4>');

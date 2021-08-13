@@ -3,17 +3,17 @@
     <div class="box-logo">
         <nav>
             <a class="big-booler" href="/"><img src="img/image.png" alt="Logo"></a>
-            <button class="cart-btn mobile" data-toggle="modal" data-target="#exampleModal"><ion-icon name="bag"></ion-icon><span class="badge badge-pill badge-danger small-text">{{ session.cart.totalQty }}</span></button>
+            <button class="cart-btn mobile" onclick="location.href='/cart';" ><ion-icon name="bag"></ion-icon><span class="badge badge-pill badge-danger small-text">{{ session.cart.totalQty }}</span></button>
             
             <a href='' class="box-primary-nav-trigger">
                 <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
             </a>
             <ul class="box-primary-nav-lg">
                 <li><a href="/mission">Our Mission</a></li>
-                <li><a href="/stories">Stories</a></li>
+                <li><a href="/media">Media</a></li>
                 <li><a href="/merch">Merch</a></li>
                 <li><a href="/contact">Contact us</a></li>
-                <li class="li-cart-btn"><button class="cart-btn" data-toggle="modal" data-target="#exampleModal"><ion-icon name="bag"></ion-icon><span class="badge badge-pill badge-danger small-text">{{ session.cart.totalQty }}</span></button></li>
+                <li class="li-cart-btn"><button class="cart-btn" onclick="location.href='/cart';" ><ion-icon name="bag"></ion-icon><span class="badge badge-pill badge-danger small-text">{{ session.cart.totalQty }}</span></button></li>
             </ul>
         </nav>
     </div>
@@ -29,7 +29,7 @@
         
         <li><a class="box-link-mobile" href="/">Home</a></li>
         <li><a class="box-link-mobile" href="/mission">Our Mission</a></li>
-        <li><a class="box-link-mobile" href="/stories">Stories</a></li>
+        <li><a class="box-link-mobile" href="/media">Media</a></li>
         <li><a class="box-link-mobile" href="/merch">Merch</a></li>
         <li><a class="box-link-mobile" href="/contact">Contact us</a></li>
 
