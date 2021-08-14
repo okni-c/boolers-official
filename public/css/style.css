@@ -956,6 +956,14 @@ b i:last-child {
     padding-top: 55px;
 }
 
+.product-link {
+    color: black;
+}
+
+.product-link:hover, .product-link:link, .product-link:active, .product-link:visited, .product-link:focus {
+    text-decoration: none;
+}
+
 /* footer
 ==================================================*/
 
