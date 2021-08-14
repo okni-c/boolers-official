@@ -22,7 +22,7 @@ router.use('/', pageRoutes);
 router.get('/', (req, res) => {
     Product.find(function (err, docs) {
         var productChuncks = [];
-        var chunkSize = 3;
+        var chunkSize = 3
         for (var i = 0; i < docs.length; i += chunkSize) {
             productChuncks.push(docs.slice(i, i + chunkSize));
         }
