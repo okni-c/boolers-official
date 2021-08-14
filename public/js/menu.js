@@ -84,7 +84,7 @@ jQuery(document).ready(function ($) {
 	}
 
 	//determine to show cart or not
-	if (window.location.pathname.includes('/merch')) {
+	if (window.location.pathname.includes('/merch') || window.location.pathname.includes('/cart')) {
 		$('.cart-btn').removeClass('is-hidden');
 		$('.li-cart-btn').removeClass('.is-hidden');
 	} else {

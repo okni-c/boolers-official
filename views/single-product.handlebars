@@ -9,51 +9,47 @@
     <!-- end top-bar -->
 
     <!-- product snipet start -->
-    <div class="container-fluid mt-2 mb-3">
+    <div class="container">
         <div class="row ">
-            <div class="col-md-7 pr-2">
-                <div class="card">
+            <div class="col-lg-8">
+                <div class="detail-card">
                     <div class="demo">
                         <ul id="lightSlider">
 
                             {{#each product.imageRoutes}}
-                            <li data-thumb={{ this }}> <img class="img-responsive" src={{ this }} /> </li>
+                            <li data-thumb={{ this }}> <img class="card-img-top" src={{ this }} /> </li>
                             {{/each}}
 
                         </ul>
                     </div>
                 </div>
+                <div class="h-30"></div>
             </div>
-            <div class="col-md-5">
-                <div class="card">
-                    <div class="">
-                        <div class="about">
-                            <h3 class="text-uppercase">{{ product.productName }}</h3>
-                            <h5>{{ product.productQuote }}</h5>
-                            <h3 class="text-uppercase">$ {{ product.price }}.00</h3>
-                            <div class="h-30"></div>
-                        </div>
-                        <button type="button" onclick="location.href='/add-to-cart/{{ product._id }}';" class="btn btn-outline-secondary btn-lg">Add to Cart</button>
-                        <button type="button" class="btn btn-success btn-lg">Buy it Now</button>
+            <div class="col-lg-4">
+                <div class="detail-card">
+                    <div class="about">
+                        <h3 class="text-uppercase">{{ product.productName }}</h3>
+                        <h5>{{ product.productQuote }}</h5>
+                        <h3 class="text-uppercase">$ {{ product.price }}.00</h3>
+                        <div class="h-30"></div>
+                    </div>
+                    <button type="button" onclick="location.href='/add-to-cart/{{ product._id }}';" class="btn btn-outline-secondary btn-lg">Add to Cart</button>
+                    <div class="h-10"></div>
+                    <button type="button" class="btn btn-success btn-lg">Buy it Now</button>
 
-                        <hr>
-                        <div class="product-description">
-
-                            <div class=""> <i class=""></i>
-                                <span class="">Delivery from sweden, 15-45 days</span>
-                            </div>
-                            <div class=""> <span class="font-weight-bold">Description</span>
-                                <p>{{ product.productDescription }}
-                                </p>
-                                <div class="bullets">
-                                    <ul class="cat-ul">
-                                        <li><i class="ion-ios-circle-filled"></i> Design</li>
-                                        <li><i class="ion-ios-circle-filled"></i> consectetur adipiscing</li>
-                                        <li><i class="ion-ios-circle-filled"></i> et gubernationis</li>
-                                        <li><i class="ion-ios-circle-filled"></i> Aliter enim nosmet</li>
-                                    </ul>
-                                    <div class="h-10"></div>
-                                </div>
+                    <hr>
+                    <div class="product-description">
+                        <div class=""> <span class="font-weight-bold">Description</span>
+                            <p>{{ product.productDescription }}
+                            </p>
+                            <div class="bullets">
+                                <ul class="cat-ul">
+                                    <li><i class="ion-ios-circle-filled"></i> 100% cotton</li>
+                                    <li><i class="ion-ios-circle-filled"></i> High quality fabric</li>
+                                    <li><i class="ion-ios-circle-filled"></i> Fade resistant design</li>
+                                    <li><i class="ion-ios-circle-filled"></i> Fitted feel</li>
+                                </ul>
+                                <div class="h-10"></div>
                             </div>
                         </div>
                     </div>

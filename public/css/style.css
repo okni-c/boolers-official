@@ -1233,6 +1233,19 @@ input:focus, textarea:focus {
     height: auto;
 }
 
+.detail-card {
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+}
+
 .cart-btn:hover {
     color: rgba(53, 53, 53, 0.596);
 }
